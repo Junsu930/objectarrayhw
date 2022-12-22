@@ -220,17 +220,17 @@ public class MemberMenu {
 			input = sc.nextInt();
 			
 			switch(input) {
-			case 1: 
+			case 1: System.out.println("정렬 완료"); sortMem=mc.sortIdAsc(); break;
 			case 2:
 			case 3:
 			case 4:
 			case 5:
-			
 			}
-			
 		}while(input != 9);{
 			mainMenu();
 		}
+		
+		mc.setMem(sortMem);
 	}
 	
 }

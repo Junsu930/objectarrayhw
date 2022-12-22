@@ -16,6 +16,8 @@ public class MemberController {
 
 	private Member[] mem = new Member[SIZE];
 	
+
+
 	{
 	mem[0] = new Member("user01", "pass01", "김유신", 20, 'M'
 			, "kim12@naver.com");
@@ -32,6 +34,9 @@ public class MemberController {
 	
 	public int getMemberCount() {
 		return memberCount;
+	}
+	public void setMem(Member[] mem) {
+		this.mem = mem;
 	}
 
 	public Member[] getMem() {
@@ -107,20 +112,24 @@ public class MemberController {
 		System.out.println("삭제 완료");
 	}
 	
-	/*
+	
 	public Member[] sortIdAsc() {
 		
 		Member[] copy = new Member[memberCount];
 				
 		System.arraycopy(mem, 0, copy, 0, memberCount);
+
+		for(int i = 0; i<memberCount-1; i++) {
 		
-		for(int i = 0; i<memberCount; i++) {
-		
-			if(copy[i].getUserId().compareTo(copy[i+1].getUserId()) == 1) {
+			if(copy[i].getUserId().compareTo(copy[i+1].getUserId()) < 1) {
+				copy[i] = copy[i+1];
+				copy[i+1] = copy[i];
 				
 			}
+		}
+		return copy;
 	}
-	
+	/*
 	public Member[] sortIdDesc() {
 		
 	}
@@ -135,7 +144,6 @@ public class MemberController {
 	public Member[] sortGenderDesc() {
 		
 	}
-	
-	}
 	*/
+
 }
