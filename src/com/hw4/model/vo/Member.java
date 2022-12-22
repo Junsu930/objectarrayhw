@@ -58,8 +58,8 @@ public class Member {
 	
 	public String information() {
 		return"ID : " + userId + "\n이름 : " + name + 
-				"\n 나이 : " + age + "\n 성별 : " + gender 
-				+ "\n 이메일 : " + email;
+				"\n나이 : " + age + "\n성별 : " + gender 
+				+ "\n이메일 : " + email;
 	}
 	
 
