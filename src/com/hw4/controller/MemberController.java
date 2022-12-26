@@ -129,6 +129,7 @@ public class MemberController {
 		}
 		return copy;
 	}
+	/*
 	
 	public Member[] sortIdDesc() {
 		
@@ -145,5 +146,5 @@ public class MemberController {
 		
 	}
 	
-
+	 */
 }
